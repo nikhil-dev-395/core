@@ -175,7 +175,7 @@ export class PoprProvider extends BaseProvider {
                 // dedupe subtitles by URL
                 if (!subtitlesMap.has(sub.url)) {
                     subtitlesMap.set(sub.url, {
-                        url: sub.url,
+                        url: this.createProxyUrl(sub.url),
                         format: 'vtt',
                         label: sub.lang || 'Unknown'
                     });
